@@ -9,6 +9,7 @@ ExternalProject_Add(
     PREFIX "${prefix}"
     INSTALL_DIR "${prefix}/package"
     UPDATE_COMMAND ""
+    BUILD_BYPRODUCTS "${prefix}/package/CL/cl2.hpp"
     CONFIGURE_COMMAND ${CMAKE_COMMAND} -Wno-dev "-G${CMAKE_GENERATOR}" <SOURCE_DIR>
     -DCMAKE_SOURCE_DIR:PATH=<SOURCE_DIR>
     -DCMAKE_CXX_COMPILER:FILEPATH=${CMAKE_CXX_COMPILER}
